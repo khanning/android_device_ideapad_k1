@@ -1,10 +1,10 @@
 # mount point	fstype		device
 
-/recovery       emmc            /dev/block/platform/sdhci-tegra.3/by-num/p1
-/boot           emmc            /dev/block/platform/sdhci-tegra.3/by-num/p2
-/system         ext4            /dev/block/platform/sdhci-tegra.3/by-num/p3
-/cache          ext4            /dev/block/platform/sdhci-tegra.3/by-num/p4
-/misc           emmc            /dev/block/platform/sdhci-tegra.3/by-num/p5
-/staging        emmc            /dev/block/platform/sdhci-tegra.3/by-num/p6
-/data           ext4            /dev/block/platform/sdhci-tegra.3/by-num/p7
-/sdcard         vfat            /dev/block/sda1
+/recovery       emmc            /dev/block/mmcblk0p1
+/boot           emmc            /dev/block/mmcblk0p2
+/system         ext4            /dev/block/mmcblk0p3
+/cache          ext4            /dev/block/mmcblk0p4
+/misc           emmc            /dev/block/mmcblk0p5
+/staging        emmc            /dev/block/mmcblk0p6
+/data           ext4            /dev/block/mmcblk0p7
+/sdcard         vfat            /dev/block/mmcblk1p1
