@@ -1867,7 +1867,7 @@ struct audio_module HAL_MODULE_INFO_SYM = {
         .version_major = 1,
         .version_minor = 0,
         .id = AUDIO_HARDWARE_MODULE_ID,
-        .name = "TPT Audio HW HAL",
+        .name = "K1 Audio HW HAL",
         .author = "Koshu",
         .methods = &hal_module_methods,
     },
