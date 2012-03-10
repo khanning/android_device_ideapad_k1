@@ -190,6 +190,7 @@ PRODUCT_COPY_FILES += \
 
 #/system/usr/keylayout
 PRODUCT_COPY_FILES += \
+    device/lenovo/k1/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
     device/lenovo/k1/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/lenovo/k1/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/lenovo/k1/keylayout/qwerty.kl:system/usr/keylayout/.kl \
