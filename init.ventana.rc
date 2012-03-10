@@ -210,12 +210,6 @@ service chmod_media /system/bin/sh /system/etc/chmod_media.sh
     user root
     group shell
     oneshot
-
-service mount_externalsd /system/bin/mount -o bind /mnt/sdcard2 /mnt/sdcard/external_sd
-    class main
-    user root
-    group shell
-    oneshot
 #Compal_End
 
 on property:net.gps.cpu.lock.enable=1
