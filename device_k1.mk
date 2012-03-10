@@ -26,6 +26,7 @@ PRODUCT_COPY_FILES += \
 
 #/system/bin
 PRODUCT_COPY_FILES += \
+    vendor/lenovo/k1/proprietary/bluetoothd:system/bin/bluetoothd \
     vendor/lenovo/k1/proprietary/brcm_patchram_plus:system/bin/brcm_patchram_plus \
     vendor/lenovo/k1/proprietary/misc_command:system/bin/misc_command \
     vendor/lenovo/k1/proprietary/tf_daemon:system/bin/tf_daemon \
@@ -94,6 +95,9 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/k1/proprietary/libnvddk_2d.so:system/lib/libnvddk_2d.so \
     vendor/lenovo/k1/proprietary/libnvddk_2d_v2.so:system/lib/libnvddk_2d_v2.so \
     vendor/lenovo/k1/proprietary/libnvddk_audiofx.so:system/lib/libnvddk_audiofx.so \
+    vendor/lenovo/k1/proprietary/libbluedroid.so:system/lib/libbluedroid.so \
+    vendor/lenovo/k1/proprietary/libbluetooth.so:system/lib/libbluetooth.so \
+    vendor/lenovo/k1/proprietary/libbluetoothd.so:system/lib/libbluetoothd.so \
     vendor/lenovo/k1/proprietary/libnvdispatch_helper.so:system/lib/libnvdispatch_helper.so \
     vendor/lenovo/k1/proprietary/libnvdispmgr_d.so:system/lib/libnvdispmgr_d.so \
     vendor/lenovo/k1/proprietary/libnvmm.so:system/lib/libnvmm.so \

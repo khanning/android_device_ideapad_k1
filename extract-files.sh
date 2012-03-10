@@ -23,6 +23,7 @@ mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /init.logging.rc ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/init.logging.rc
 adb pull /ueventd.ventana.rc ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/ueventd.ventana.rc
 adb pull /ueventd.goldfish.rc ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/ueventd.goldfish.rc
+adb pull /system/bin/bluetoothd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bluetoothd
 adb pull /system/bin/brcm_patchram_plus ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/brcm_patchram_plus
 adb pull /system/bin/misc_command ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/misc_command
 adb pull /system/bin/tf_daemon ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tf_daemon
@@ -72,6 +73,9 @@ adb pull /system/lib/libarcsoft_source.so ../../../vendor/$MANUFACTURER/$DEVICE/
 adb pull /system/lib/libaudio.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libaudio.so
 adb pull /system/lib/libaudiopolicy.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libaudiopolicy.so
 adb pull /system/lib/libmllite.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libmllite.so
+adb pull /system/lib/libbluedroid.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libbluedroid.so
+adb pull /system/lib/libbluetooth.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libbluetooth.so
+adb pull /system/lib/libbluetoothd.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libbluetoothd.so
 adb pull /system/lib/libmlplatform.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libmlplatform.so
 adb pull /system/lib/libmpl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libmpl.so
 adb pull /system/lib/libsensors.mpl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libsensors.mpl.so
@@ -167,6 +171,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ueventd.goldfish.rc:ueventd.goldfish.rc \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ueventd.ventana.rc:ueventd.ventana.rc \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/init.logging.rc:init.logging.rc \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/bluetoothd:system/bin/bluetoothd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/brcm_patchram_plus:system/bin/brcm_patchram_plus \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/misc_command:system/bin/misc_command \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/tf_daemon:system/bin/tf_daemon \\
@@ -223,6 +228,9 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libnvddk_2d.so:system/lib/libnvddk_2d.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libnvddk_2d_v2.so:system/lib/libnvddk_2d_v2.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libnvddk_audiofx.so:system/lib/libnvddk_audiofx.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libbluedroid.so:system/lib/libbluedroid.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libbluetooth.so:system/lib/libbluetooth.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libbluetoothd.so:system/lib/libbluetoothd.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libnvdispatch_helper.so:system/lib/libnvdispatch_helper.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libnvdispmgr_d.so:system/lib/libnvdispmgr_d.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libnvmm.so:system/lib/libnvmm.so \\
