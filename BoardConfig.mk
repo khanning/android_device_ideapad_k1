@@ -51,6 +51,7 @@ WIFI_DRIVER_FW_PATH_AP  := "/system/vendor/firmware/fw_bcm4329_apsta.bin"
 WIFI_DRIVER_MODULE_ARG  := "iface_name=wlan0 firmware_path=/system/vendor/firmware/fw_bcm4329.bin nvram_path=/system/etc/nvram.txt"
 WIFI_DRIVER_MODULE_NAME := "bcm4329"
 
+BOARD_USES_AUDIO_LEGACY := true
 BOARD_USES_GENERIC_AUDIO := false
 #BOARD_USES_ALSA_AUDIO := true
 #BOARD_USES_ALSA_UTILS := true
