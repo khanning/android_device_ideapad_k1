@@ -193,7 +193,7 @@ PRODUCT_COPY_FILES += \
     device/lenovo/k1/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
     device/lenovo/k1/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/lenovo/k1/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/lenovo/k1/keylayout/qwerty.kl:system/usr/keylayout/.kl \
+    device/lenovo/k1/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/lenovo/k1/keylayout/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
     device/lenovo/k1/keylayout/Vendor_22b8_Product_093d.kl:system/usr/keylayout/Vendor_22b8_Product_093d.kl \
     device/lenovo/k1/keylayout/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
@@ -251,7 +251,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=15 \
+    ro.goo.developerid=khanning \
+    ro.goo.rom=CM9_K1 \
+    ro.goo.version=1
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/lenovo/k1/overlay
