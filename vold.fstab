@@ -1,0 +1,16 @@
+## Vold 2.0 fstab for ventana
+
+#######################
+## Regular device mount
+##
+## Format: dev_mount <label> <mount_point> <part> <sysfs_path1...>
+## label        - Label for the volume
+## mount_point  - Where the volume will be mounted
+## part         - Partition # (1 based), or 'auto' for first usable partition.
+## <sysfs_path> - List of sysfs paths to source devices
+######################
+#Compal Start William 2011-09-13, change the device node for external USB storage after enabling USB Accessory
+#dev_mount usbdrive /mnt/usbdrive auto /devices/platform/tegra-ehci.2/usb2
+dev_mount usbdrive /mnt/usbdrive auto /devices/platform/tegra-ehci.2/usb1
+#Compal End William 2011-09-13
+dev_mount sdcard /mnt/sdcard/external_sd auto /devices/platform/sdhci-tegra.2/mmc_host/mmc1

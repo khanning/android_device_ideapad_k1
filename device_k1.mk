@@ -34,7 +34,7 @@ PRODUCT_COPY_FILES += \
 
 #/system/etc
 PRODUCT_COPY_FILES += \
-    vendor/lenovo/k1/proprietary/vold.fstab:system/etc/vold.fstab \
+    device/lenovo/k1/vold.fstab:system/etc/vold.fstab \
     vendor/lenovo/k1/proprietary/gps.conf:system/etc/gps.conf \
     vendor/lenovo/k1/proprietary/nvram.txt:system/etc/nvram.txt \
     vendor/lenovo/k1/proprietary/chmod_media.sh:system/etc/chmod_media.sh \

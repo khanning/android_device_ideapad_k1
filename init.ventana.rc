@@ -7,7 +7,8 @@ on early-init
     symlink /mnt/sdcard /sdcard
 
     #Compal William 2011-08-31, modify external SD card mount point permission from 0000 -> 0775
-    mkdir /mnt/sdcard2 0775 system system
+    # mkdir /mnt/sdcard2 0775 system system
+    symlink /mnt/sdcard/external_sd /mnt/sdcard2
 
     # create directory for mounting usb drives
     mkdir /mnt/usbdrive 0666 system system
