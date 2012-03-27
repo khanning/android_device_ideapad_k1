@@ -7,8 +7,7 @@ on early-init
     symlink /mnt/sdcard /sdcard
 
     #Compal William 2011-08-31, modify external SD card mount point permission from 0000 -> 0775
-    # mkdir /mnt/sdcard2 0775 system system
-    symlink /mnt/sdcard/external_sd /mnt/sdcard2
+    mkdir /mnt/sdcard2 0775 system system
 
     # create directory for mounting usb drives
     mkdir /mnt/usbdrive 0666 system system
@@ -165,20 +164,6 @@ service gps-daemon /system/bin/glgps_nvidiaTegra2android -c /system/etc/gps/gpsc
     user root
     group root
 
-#Compal Start + Eileen + mount 3rd party folders
-service mount_three /system/bin/mount -o bind /data/temp/media /data/media/lenovo_media
-    class main
-    user root
-    group shell
-    oneshot
-
-service mount_media /system/bin/mount -o bind /data/temp/media/VendettaOnline /data/media/VendettaOnline
-    class main
-    user root
-    group shell
-    oneshot
-#Compal End
-
 # Mount usb drives as /usbdrive. Generally usb drives are formatted with FAT
 # filesystem, so we support FAT as of now.
 on device-added-/sys/block/sda
@@ -211,7 +196,12 @@ service chmod_media /system/bin/sh /system/etc/chmod_media.sh
     user root
     group shell
     oneshot
-#Compal_End
+
+service link_sdcards /system/bin/sh /system/bin/linksdcard
+    class main
+    user root
+    group shell
+    oneshot
 
 on property:net.gps.cpu.lock.enable=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 816000

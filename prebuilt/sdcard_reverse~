@@ -1,0 +1,10 @@
+#!/system/bin/sh
+
+sleep 30
+
+/system/bin/log -t reverse_sdcard "Reversing sdcard mount locations"
+
+mkdir /mnt/sdcard/internal_sd
+
+mount -o bind /data/media /mnt/sdcard2
+mount -o bind /mnt/sdcard2 /mnt/sdcard/internal_sd

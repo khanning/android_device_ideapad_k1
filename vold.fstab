@@ -13,4 +13,4 @@
 #dev_mount usbdrive /mnt/usbdrive auto /devices/platform/tegra-ehci.2/usb2
 dev_mount usbdrive /mnt/usbdrive auto /devices/platform/tegra-ehci.2/usb1
 #Compal End William 2011-09-13
-dev_mount sdcard /mnt/sdcard/external_sd auto /devices/platform/sdhci-tegra.2/mmc_host/mmc1
+dev_mount sdcard /mnt/sdcard2 auto /devices/platform/sdhci-tegra.2/mmc_host/mmc1
