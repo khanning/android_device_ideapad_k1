@@ -1,0 +1,4 @@
+#!/system/bin/sh
+
+echo 'boot-recovery' > /dev/block/mmcblk0p5; sync
+reboot

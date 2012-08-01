@@ -1,0 +1,20 @@
+# A extra init rc script for syslogd
+
+service syslogd /system/bin/syslogd -n -S -s 1024 -b 20 -O /sdcard/system.log
+    disabled
+
+service klogd /system/bin/klogd -n
+    disabled
+
+on property:service.internal.enablesyslogd=y
+    start syslogd
+
+on property:service.internal.enablesyslogd=n 
+    stop syslogd
+
+on property:service.internal.enableklogd=y
+    start klogd
+
+on property:service.internal.enableklogd=n
+    stop klogd
+

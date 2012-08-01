@@ -1,4 +1,5 @@
 LOCAL_PATH := $(call my-dir)
+
 include $(CLEAR_VARS)
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -9,8 +10,6 @@ file := $(INSTALLED_KERNEL_TARGET)
 ALL_PREBUILT += $(file)
 $(file): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
-
-include $(CLEAR_VARS)
 
 COMMON_DIR := vendor/nvidia/common/
 

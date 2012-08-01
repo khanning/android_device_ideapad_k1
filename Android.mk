@@ -13,7 +13,3 @@
 # limitations under the License.
 
 LOCAL_PATH := $(my-dir)
-subdir_makefiles := \
-        $(LOCAL_PATH)/audio/Android.mk
-
-include $(subdir_makefiles)
