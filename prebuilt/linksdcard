@@ -1,7 +1,0 @@
-#!/system/bin/sh
-
-sleep 30
-
-/system/bin/log -t link_sdcards "Linking sdcard mount points"
-
-mount -o bind /mnt/sdcard2 /mnt/sdcard/external_sd
